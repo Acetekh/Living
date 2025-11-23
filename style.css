@@ -3957,9 +3957,10 @@ ul.nav-menu {
     display: block;
 }
 
-.phone_number{
+.phonr_number{
     text-decoration: none;
-    color: var(--background-color);
+    /* color: var(--background-color); */
+    color: black;
 }
 
 .footer-links li a:hover {
@@ -3970,6 +3971,7 @@ ul.nav-menu {
 .footer-contact-info p {
     padding: 5px 0px;
     text-decoration: none;
+
 
 }
 
