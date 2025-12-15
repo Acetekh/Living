@@ -11,6 +11,8 @@ AOS.init({
 });
 
 
+
+
 // smooth scrolling 
 var scroll = new SmoothScroll('a[href*="#"]', {
     speed: 800,
@@ -50,17 +52,13 @@ document.addEventListener('DOMContentLoaded', () => {
             const content = header.nextElementSibling;
             const isCurrentlyActive = header.classList.contains('active');
 
-            // 1. Close ALL currently active headers (the "single-open" logic)
             document.querySelectorAll('.accordion-header.active').forEach(openHeader => {
                 openHeader.classList.remove('active');
                 openHeader.nextElementSibling.style.maxHeight = null;
             });
 
-            // 2. Open the clicked header ONLY if it was NOT already open
             if (!isCurrentlyActive) {
-                // Open the clicked one
                 header.classList.add('active');
-                // Use scrollHeight for smooth transition based on content size
                 content.style.maxHeight = content.scrollHeight + 'px';
             }
         });
@@ -103,3 +101,43 @@ document.addEventListener('DOMContentLoaded', () => {
         menuToggle.classList.toggle('active');
     });
 });
+
+
+
+document.querySelectorAll('a[href]').forEach(link => {
+    if (!link.href.includes('#')) { 
+        link.addEventListener('click', function(event) {
+            event.preventDefault(); 
+            document.body.classList.add('fade-out'); 
+            setTimeout(() => {
+                window.location.href = link.href; 
+            }, 500); 
+        });
+    }
+});
+
+
+
+ const reviewTab = document.getElementById('reviewTab');
+    const reviewFormPopup = document.getElementById('reviewFormPopup');
+    const body = document.body;
+
+    reviewTab.addEventListener('click', function() {
+        reviewFormPopup.classList.toggle('active');
+        
+        // This toggles the CSS class that includes the overflow:hidden and padding-right fix
+        if (reviewFormPopup.classList.contains('active')) {
+            body.classList.add('modal-open');
+        } else {
+            body.classList.remove('modal-open');
+        }
+    });
+
+    document.addEventListener('click', function(event) {
+        if (!reviewFormPopup.contains(event.target) && !reviewTab.contains(event.target)) {
+            reviewFormPopup.classList.remove('active');
+            
+            // Removing the CSS class when closing the form
+            body.classList.remove('modal-open');
+        }
+    });

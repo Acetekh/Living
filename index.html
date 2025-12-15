@@ -10,11 +10,12 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0/dist/smooth-scroll.polyfills.min.js"></script>
-<base href="/Living/">
+<!-- <base href="/Living/"> -->
    
 </head>
 
 <body>
+ 
 
     <!-- nav section  -->
     <header>
@@ -54,9 +55,8 @@
             <p>Whether it’s your living space, workplace, or a commercial property, we bring ideas to life with
                 creativity and care.</p>
             <div class="hero-button">
-
-                <button class="btn1">Contact us</button>
-                <button class="btn2">Browse our services</button>
+<a class="btn1" href="contactus.html">Contact us</a>
+<a class="btn2" href="portfolio.html">Browse our services</a>
             </div>
         </div>
 
@@ -77,7 +77,7 @@
                 <p>At Crestone Living, we believe your space
                     should tell your story — beautifully, functionally,
                     and effortlessly.</p>
-                <button>See more about us</button>
+                    <a href="about.html">See more about us</a>
             </div>
         </div>
     </section>
@@ -123,69 +123,52 @@
 
     <!-- services section  -->
     <section>
-        <div class="services" data-aos="fade-up">
+    <div class="services" data-aos="fade-up">
 
-            <div >
-
-                <!-- <img src="" alt=""> background image -->
-                <!-- <h1>Our services</h1> -->
-                <span class="style-a">Our services</span>
-                <h2 style="margin-top: 10px; margin-bottom: 7px; letter-spacing: 3px;"><span
-                        class="style-b">Discover</span> <span class="style-c">Our Interior Design Services</span></h2>
-                <p style="margin-bottom: 20px; letter-spacing: 1px;"> <span class="style-c">From concept to completion,
-                        we blend creativity and precision to design spaces that reflect your
-                        vision
-                        and lifestyle.</span></p>
-                <button>Browse all services</button>
-            </div>
+        <div class="services-left">
+            <span class="style-a">Our services</span>
+            <h2 style="margin-top: 10px; margin-bottom: 7px; letter-spacing: 3px;"><span class="style-b">Discover</span> <span class="style-c">Our Interior Design Services</span></h2>
+            <p class="services-parapgraph"> <span class="style-c">From concept to completion, we blend creativity and precision to design spaces that reflect your vision and lifestyle.</span></p>
+            <a class="seb" href="services.html">Browse all services</a>
+        </div>
 
 
-            <div >
+        <div class="services-grid-wrapper">
+
+            <div class="services-text-col">
                 <div class="services-text">
                     <section class="sbg">
-
                         <h1>Residential Design</h1>
-                        <p>We design homes that feel inviting, stylish, and uniquely yours. From living rooms to
-                            bedrooms,
-                            we craft spaces that balance beauty with everyday comfort.</p>
+                        <p>We design homes that feel inviting, stylish, and uniquely yours. From living rooms to bedrooms, we craft spaces that balance beauty with everyday comfort.</p>
                     </section>
                 </div>
                 <div class="services-text1">
                     <section class="sbg">
-
                         <h1>2D/3D Floor Planning</h1>
-                        <p>We create detailed 2D/3D floor plans that bring your project to life before construction
-                            begins. Our layouts help you visualize space, flow, and functionality.</p>
+                        <p>We create detailed 2D/3D floor plans that bring your project to life before construction begins. Our layouts help you visualize space, flow, and functionality.</p>
                     </section>
                 </div>
-                <!-- <div>
-                    <img src="./image/3dplan.png" alt="image">
-
-                </div> -->
             </div>
-            <div >
 
+            <div class="services-text-col">
                 <div class="services-text2">
                     <section class="sbg">
-
                         <h1>Art & Accessories</h1>
-                        <p>The finishing touches make a space complete. From artwork to accessories, we source elements
-                            that reflect your personality and add character to your interiors.</p>
+                        <p>The finishing touches make a space complete. From artwork to accessories, we source elements that reflect your personality and add character to your interiors.</p>
                     </section>
                 </div>
                 <div class="services-text3">
                     <section class="sbg">
-
                         <h1>Furniture Selection</h1>
-                        <p>Choosing the right furniture is key to comfort and style. We curate pieces that complement
-                            your space, ensuring balance, function, and a timeless aesthetic.</p>
+                        <p>Choosing the right furniture is key to comfort and style. We curate pieces that complement your space, ensuring balance, function, and a timeless aesthetic.</p>
                     </section>
                 </div>
             </div>
 
         </div>
 
-    </section>
+    </div>
+</section>
 
 
     <!-- specialized services  -->
@@ -266,8 +249,8 @@
         <div class="project">
             <div>
                 <span class="style-d">project</span>
-                <p style="margin-top: 10px; margin-bottom: 10px;">Browse our interior design projects</p>
-                <button>view portfolio</button>
+                <p >Browse our interior design projects</p>
+                <a href="portfolio.html">view portfolio</a>
             </div>
 
 
@@ -301,7 +284,7 @@
 
                 <h2>What Our clients say</h2>
                 <p class="tp">Every project tells a story — here’s what our clients say about working with us.</p>
-                <button>view more</button>
+                <a href="about.html">view more</a>
 
                 <div style="margin-top: 50px;" class="test">
                     <p class="story">"Crestone Living completely transformed our office space into something truly
@@ -368,10 +351,10 @@
         <div class="footer-col footer-company-links">
             <h2>our company</h2>
             <ul class="footer-links">
-                <li><a href="">About</a></li>
-                <li><a href="">Services</a></li>
-                <li><a href="">Portfolio</a></li>
-                <li><a href="">Gallery</a></li>
+      <li><a href="./about.html">About</a></li>
+                <li><a href="./services.html">Services</a></li>
+                <li><a href="./portfolio.html">Portfolio</a></li>
+                <li><a href="./gallery.html">Gallery</a></li>
             </ul>
         </div>
 
@@ -403,6 +386,43 @@
 
     </div>
 </footer>
+
+    <div class="review-widget-container">
+        
+        <div class="review-tab" id="reviewTab">
+            <span class="review-icon">★</span> <span class="review-text">Leave a Review</span> </div>
+
+        <div class="review-form-popup" id="reviewFormPopup">
+            <h3>Share Your Experience</h3>
+            
+            <form action="https://api.web3forms.com/submit" method="POST" id="reviewForm">
+                    <input type="hidden" name="access_key" value="d36401e5-388f-403e-be76-4897867fd837">
+                
+                <label for="rating">Service Rating:</label>
+                
+                <div class="star-rating">
+                    <input type="radio" id="star5" name="rating" value="5" required /><label for="star5" title="5 stars">★</label>
+                    <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="4 stars">★</label>
+                    <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="3 stars">★</label>
+                    <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="2 stars">★</label>
+                    <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="1 star">★</label>
+                </div>
+                
+                <label for="reviewText">Your Detailed Review:</label>
+                <textarea id="reviewText" name="reviewText" rows="4" placeholder="Tell us about your project and how we did..." required></textarea>
+                
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" placeholder="John S." required>
+                
+                <div class="permission-checkbox">
+                    <input type="checkbox" id="permission" name="permission" value="yes">
+                    <label for="permission">Yes, you can feature my review on your website.</label>
+                </div>
+                
+                <button type="submit">Submit Review</button>
+            </form>
+        </div>
+    </div>
     <script src="./script.js"></script>
 
 </body>

@@ -12,7 +12,7 @@
         src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0/dist/smooth-scroll.polyfills.min.js"></script>
 
     <title>Contact</title>
-    <base href="/Living/">
+    <!-- <base href="/Living/"> -->
 </head>
 
 <body>
@@ -86,26 +86,33 @@
                 <h2>Send us a message</h2>
                 <p class="subtitle">Fill out the form below and we'll get back to you within 24 hours.</p>
 
-                <form action="#" method="POST"> <!-- action and method can be updated for backend -->
+                <form action="https://api.web3forms.com/submit" method="POST"> 
+
+                    <input type="hidden" name="access_key" value="d36401e5-388f-403e-be76-4897867fd837">
+
+<input type="hidden" name="subject" value="NEW MESSAGE regarding Services Interested In">   
+                    <input type="hidden" name="botcheck" value="">
+
+            
                     <div class="form-row">
                         <div class="form-group">
                             <label for="first-name">First Name</label>
-                            <input type="text" id="first-name" name="first_name" placeholder="Your first name">
+                            <input type="text" id="first-name" name="first_name" placeholder="Your first name" required>
                         </div>
                         <div class="form-group">
                             <label for="last-name">Second Name</label>
-                            <input type="text" id="last-name" name="last_name" placeholder="Your last name">
+                            <input type="text" id="last-name" name="last_name" placeholder="Your last name" required>
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="your.email@example.com">
+                        <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
                     </div>
 
                     <div class="form-group">
                         <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone" placeholder="+234 (0) 803 306 2186">
+                        <input type="tel" id="phone" name="phone" placeholder="+234 (0) 803 306 2186" required>
                     </div>
 
                     <div class="form-group">
@@ -276,7 +283,9 @@
 
     <section style="padding: 30px;" data-aos="zoom-in">
         <div class="contact-button">
-            <button class="btn3">view portfolio</button> <button class="btn4">our services</button>
+            
+            <a class="btn3" href=""> view portfolio</a> <a class="btn4" href="">our services</a>
+            <!-- <button class="btn3">view portfolio</button> <button class="btn4">our services</button> -->
         </div>
     </section>
 
@@ -303,10 +312,10 @@
         <div class="footer-col footer-company-links">
             <h2>our company</h2>
             <ul class="footer-links">
-                <li><a href="">About</a></li>
-                <li><a href="">Services</a></li>
-                <li><a href="">Portfolio</a></li>
-                <li><a href="">Gallery</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./services.html">Services</a></li>
+                <li><a href="./portfolio.html">Portfolio</a></li>
+                <li><a href="./gallery.html">Gallery</a></li>
             </ul>
         </div>
 
@@ -336,9 +345,48 @@
         </div>
 
     </div>
+
+
+    <div class="review-widget-container">
+        
+        <div class="review-tab" id="reviewTab">
+            <span class="review-icon">★</span> <span class="review-text">Leave a Review</span> </div>
+
+        <div class="review-form-popup" id="reviewFormPopup">
+            <h3>Share Your Experience</h3>
+            
+            <form action="https://api.web3forms.com/submit" method="POST" id="reviewForm">
+                    <input type="hidden" name="access_key" value="d36401e5-388f-403e-be76-4897867fd837">
+                
+                <label for="rating">Service Rating:</label>
+                
+                <div class="star-rating">
+                    <input type="radio" id="star5" name="rating" value="5" required /><label for="star5" title="5 stars">★</label>
+                    <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="4 stars">★</label>
+                    <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="3 stars">★</label>
+                    <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="2 stars">★</label>
+                    <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="1 star">★</label>
+                </div>
+                
+                <label for="reviewText">Your Detailed Review:</label>
+                <textarea id="reviewText" name="reviewText" rows="4" placeholder="Tell us about your project and how we did..." required></textarea>
+                
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" placeholder="Clement A." required>
+                
+                <div class="permission-checkbox">
+                    <input type="checkbox" id="permission" name="permission" value="yes">
+                    <label for="permission">Yes, you can feature my review on your website.</label>
+                </div>
+                
+                <button type="submit">Submit Review</button>
+            </form>
+        </div>
+    </div>
+
 </footer>
     <script src="./script.js"></script>
-
+    
 </body>
 
 </html>
