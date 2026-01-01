@@ -2428,13 +2428,20 @@ text-decoration: none;
 }
 
 .gallery-grid {
-    display: grid;
-    /* Grid layout: automatically fit as many columns as possible with a min width of 300px */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    display: grid;    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     margin-top: 40px;
 }
 
+.video-items{
+    padding-bottom: 20px;
+   
+    border-radius: 10px;
+}
+ iframe .video-items {
+    border: none;
+
+    
+}
 /* Container for each video item */
 .video-item {
     background-color: var(--background-color);
@@ -2444,6 +2451,7 @@ text-decoration: none;
     position: relative;
     padding-bottom: 56.25%;
     height: 80vh;
+  
 
 }
 
@@ -2456,14 +2464,6 @@ text-decoration: none;
     border: none;
 }
 
-.video-details {
-    padding: 15px;
-}
-
-.video-details h3 {
-    font-size: 18px;
-    margin-bottom: 5px;
-}
 
 
 
@@ -3147,81 +3147,28 @@ textarea {
     }
 }
 
-/* 
-@media (max-width: 360px), (max-width: 500px) {
-     .services {
-        flex-direction: column;
-        padding: 40px 15px;
-        gap: 20px;
+
+@media (max-width: 320px) {
+     .gallery-grid{
+        display: flex;
         justify-content: center;
-
-
-    }
-
-    .services img {
-        width: 100%;
-        height: auto;
-    }
-   
-
-    .services2 {
         flex-direction: column;
-flex: 1 1 100%;
-        gap: 15px;
-
-    }
-} */
-
-
-/* @media (max-width: 800px), (max-width: 844px) {
-     .services {
-        flex-direction: column;
-        padding: 40px 15px;
         gap: 20px;
-
-
-    }
-
-    .services img {
         width: 100%;
-        height: auto;
+        height: 100%;
     }
-   
+}
 
-    .services2 {
-        flex-direction: column;
-flex: 1 1 100%;
-        gap: 15px;
 
-    }
-} */
+
 
 
 @media (max-width: 768px) {
-     /* .services {
-        flex-direction: column;
-        padding: 40px 15px;
-        gap: 20px;
-
-
-    }
-
-    .services img {
-        width: 100%;
-        height: auto;
-    }
    
-
-    .services2 {
-        flex-direction: column;
-flex: 1 1 100%;
-        gap: 15px;
-
-    } */
    
     .gii {
         display: flex;
-        /* flex-direction: column; */
+       
         flex-wrap: wrap;
     }
 
@@ -3251,7 +3198,6 @@ flex: 1 1 100%;
 
     .gi {
         display: flex;
-        /* flex-direction: column; */
         flex-wrap: wrap;
 
     }
@@ -3262,13 +3208,12 @@ flex: 1 1 100%;
 
 
 
-/* --- Mobile Responsiveness (Stacks Vertically) --- */
+
 @media (max-width: 900px) {
     .faq-section {
         flex-direction: column;
         gap: 40px;
         align-items: center;
-        /* Adjust margin for mobile */
         margin: 50px auto;
     }
 
@@ -3486,11 +3431,7 @@ flex: 1 1 100%;
 
     }
 
-    /* .contact-button{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    } */
+   
 
     .abheading {
         font-size: 13px;
@@ -3723,6 +3664,7 @@ flex: 1 1 100%;
     .hero-button {
         gap: 15px;
     }
+    
 }
 
 
@@ -3954,6 +3896,8 @@ ul.nav-menu {
     .metric-number {
         font-size: 4rem;
     }
+
+    
 }
 
 
@@ -4113,16 +4057,6 @@ ul.nav-menu {
 
 }
 
-/* 
-.footer-contact-info p a:hover {
-
-    color: var(--background-color); 
-
-} */
-/* .footer-links li a:hover {
-    color: var(--background-color);
-    transition: 0.4s ease-in;
-} */
 
 .footer-contact-info p {
     padding: 5px 0px;
@@ -4147,6 +4081,19 @@ ul.nav-menu {
 
     .project p {
         width: 90%;
+    }
+     .video-items{
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        gap: 20px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .video-items iframe{
+      width: 100%;
+        height: 100%;
     }
 }
 
@@ -4451,6 +4398,15 @@ textarea {
         padding: 12px;
         font-size: 15px;
     }
+
+    .video-items{
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        gap: 20px;
+        width: 100%;
+        height: 100%;
+    }
 }
 
 /* Tablets */
@@ -4465,6 +4421,15 @@ textarea {
         top: -10px;
         width: 280px;
     }
+     .video-items{
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        gap: 20px;
+        width: 100%;
+        height: 100%;
+    }
+    
 }
 
 
@@ -4502,4 +4467,5 @@ textarea {
         margin-left: auto;
         margin-right: auto;
     }
+    
 }
