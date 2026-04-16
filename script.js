@@ -65,6 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+
 // Animation
 document.addEventListener('DOMContentLoaded', () => {
     const animatedElements = document.querySelectorAll('.js-fade-in');
